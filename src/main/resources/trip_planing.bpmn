@@ -55,7 +55,7 @@
     <bpmn:sequenceFlow id="SequenceFlow_0wc1xaq" name="No" sourceRef="ExclusiveGateway_11a1f7j" targetRef="ExclusiveGateway_1pqi8ab" />
     <bpmn:sequenceFlow id="SequenceFlow_025mk67" sourceRef="Task_0daxsvj" targetRef="ExclusiveGateway_0yih5gz" />
     <bpmn:sequenceFlow id="SequenceFlow_1eujw3a" sourceRef="IntermediateThrowEvent_17we26o" targetRef="Task_1bokzeu" />
-    <bpmn:intermediateCatchEvent id="IntermediateThrowEvent_17we26o">
+    <bpmn:intermediateCatchEvent id="IntermediateThrowEvent_17we26o" name="confirmation received">
       <bpmn:incoming>SequenceFlow_1xrrrld</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_1eujw3a</bpmn:outgoing>
       <bpmn:messageEventDefinition messageRef="Message_04t86k3" />
@@ -66,7 +66,7 @@
       <bpmn:outgoing>SequenceFlow_1xrrrld</bpmn:outgoing>
       <bpmn:outgoing>SequenceFlow_0bc8jby</bpmn:outgoing>
     </bpmn:eventBasedGateway>
-    <bpmn:intermediateCatchEvent id="IntermediateCatchEvent_1ys5k31">
+    <bpmn:intermediateCatchEvent id="IntermediateCatchEvent_1ys5k31" name="1 min passed">
       <bpmn:incoming>SequenceFlow_0bc8jby</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_06dnxze</bpmn:outgoing>
       <bpmn:timerEventDefinition>
@@ -92,7 +92,7 @@
       <bpmn:incoming>SequenceFlow_06dnxze</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_1tz60v4</bpmn:outgoing>
     </bpmn:userTask>
-    <bpmn:sendTask id="Task_0daxsvj" name="Send search free acc request" camunda:class="com.team5.task.HostRequestDelegate">
+    <bpmn:sendTask id="Task_0daxsvj" name="Request free accomodation" camunda:class="com.team5.task.HostRequestDelegate">
       <bpmn:incoming>SequenceFlow_1lbap6w</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_025mk67</bpmn:outgoing>
     </bpmn:sendTask>
@@ -202,6 +202,9 @@
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="IntermediateCatchEvent_0hzh4mt_di" bpmnElement="IntermediateThrowEvent_17we26o">
         <dc:Bounds x="719" y="649" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="707" y="619" width="60" height="27" />
+        </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="SequenceFlow_1xrrrld_di" bpmnElement="SequenceFlow_1xrrrld">
         <di:waypoint x="635" y="667" />
@@ -212,6 +215,9 @@
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="IntermediateCatchEvent_1ys5k31_di" bpmnElement="IntermediateCatchEvent_1ys5k31">
         <dc:Bounds x="486" y="649" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="471" y="619" width="66" height="14" />
+        </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="SequenceFlow_0bc8jby_di" bpmnElement="SequenceFlow_0bc8jby">
         <di:waypoint x="585" y="667" />

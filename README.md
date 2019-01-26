@@ -80,6 +80,9 @@ java -jar path/to/target/tripplanner.jar
 ```
 
 ## EE Settings
+
+In `~/.m2/settings.xml`:
+
 ```xml
 <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"

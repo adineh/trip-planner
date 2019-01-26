@@ -78,3 +78,27 @@ step 2
 ```bash
 java -jar path/to/target/tripplanner.jar
 ```
+
+## EE Settings
+```xml
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
+                          https://maven.apache.org/xsd/settings-1.0.0.xsd">
+      <localRepository/>
+      <interactiveMode/>
+      <offline/>
+      <pluginGroups/>
+      <servers>
+        <server>
+            <id>camunda-bpm-nexus-ee</id>
+            <username>YOUR USERNAME</username>
+            <password>YOUR PASSWORD</password>
+        </server>
+      </servers>
+      <mirrors/>
+      <proxies/>
+      <profiles/>
+      <activeProfiles/>
+</settings>
+```

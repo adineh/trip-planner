@@ -67,3 +67,14 @@ Built and tested against Camunda BPM version 7.10.0.
 <!-- Tweet
 New @Camunda example: Camunda Spring Boot Application - Spring Boot Application using [Camunda](http://docs.camunda.org). https://github.com/camunda-consulting/code/tree/master/snippets/tripplanner
 -->
+
+### Start trip-planner
+step 1
+```bash
+mvn install
+```
+
+step 2
+```bash
+java -jar path/to/target/tripplanner.jar
+```
